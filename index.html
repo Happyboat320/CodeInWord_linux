@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CodeInWord Linux</title>
+  <link rel="stylesheet" href="vendor/github.min.css" id="highlight-theme">
+  <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="workspace" aria-label="Code highlighter workspace">
+      <div class="pane input-pane">
+        <div class="pane-header">
+          <h1>CodeInWord Linux</h1>
+          <p>本地代码高亮，复制后粘贴到 WPS / LibreOffice。</p>
+        </div>
+        <textarea id="code-input" spellcheck="false" placeholder="在这里粘贴代码..."></textarea>
+      </div>
+
+      <div class="pane output-pane">
+        <div class="toolbar" aria-label="Options">
+          <label>
+            <span>语言</span>
+            <select id="language-select">
+              <option value="plaintext">Plain Text</option>
+              <option value="python" selected>Python</option>
+              <option value="javascript">JavaScript</option>
+              <option value="typescript">TypeScript</option>
+              <option value="java">Java</option>
+              <option value="cpp">C / C++</option>
+              <option value="csharp">C#</option>
+              <option value="go">Go</option>
+              <option value="rust">Rust</option>
+              <option value="bash">Bash / Shell</option>
+              <option value="sql">SQL</option>
+              <option value="xml">HTML / XML</option>
+              <option value="css">CSS</option>
+              <option value="json">JSON</option>
+              <option value="yaml">YAML</option>
+              <option value="markdown">Markdown</option>
+            </select>
+          </label>
+
+          <label>
+            <span>主题</span>
+            <select id="theme-select">
+              <option value="light" selected>GitHub Light</option>
+              <option value="dark">GitHub Dark</option>
+            </select>
+          </label>
+
+          <label>
+            <span>字号</span>
+            <select id="font-size-select">
+              <option value="10px">10</option>
+              <option value="11px">11</option>
+              <option value="12px" selected>12</option>
+              <option value="14px">14</option>
+              <option value="16px">16</option>
+              <option value="18px">18</option>
+            </select>
+          </label>
+
+          <button id="line-numbers-toggle" type="button" aria-pressed="true">行号</button>
+          <button id="sample-button" type="button">示例</button>
+          <button id="clear-button" type="button">清空</button>
+          <button id="copy-button" type="button" class="primary">复制</button>
+          <button id="download-button" type="button">导出 HTML</button>
+        </div>
+
+        <div id="status" class="status" role="status" aria-live="polite"></div>
+        <div id="preview" class="preview" tabindex="0" aria-label="Highlighted code preview"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="vendor/highlight.min.js"></script>
+  <script src="src/app.js"></script>
+</body>
+</html>
