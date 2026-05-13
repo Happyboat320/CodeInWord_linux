@@ -2,6 +2,12 @@
 
 本地离线代码高亮工具。浏览器页面适合人工复制到 WPS / LibreOffice，`cli.js` 适合本地 agent 通过输入输出调用。
 
+本项目为 https://www.codeinword.com/ 的复刻，设计基本保持了一致。主要为了解决linux下可能存在的不兼容和方便编程agent工具自动化使用的问题。
+
+手动使用网页版：https://happyboat.site/codeinword_linux
+
+也可以下载后部署在本地：
+
 ## 浏览器使用
 
 ```bash
